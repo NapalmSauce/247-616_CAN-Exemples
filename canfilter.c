@@ -50,6 +50,9 @@ int main(int argc, char **argv)
 	rfilter[0].can_mask = 0xFF0;
 	rfilter[1].can_id   = 0x480;
 	rfilter[1].can_mask = 0xFF0;
+	rfilter[1].can_id   = 0x864;
+	rfilter[1].can_mask = 0x00F;
+
 
 	setsockopt(fdSocketCAN, SOL_CAN_RAW, CAN_RAW_FILTER, &rfilter, sizeof(rfilter));
 
